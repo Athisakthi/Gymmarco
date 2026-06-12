@@ -1,0 +1,131 @@
+.package-page {
+    padding-top: 100px;
+}
+
+.pricing-section {
+    padding: 4rem 2rem 8rem;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 2.25rem;
+    position: relative;
+    height: 100%;
+}
+
+.pricing-card.featured {
+    background: rgba(124, 58, 237, 0.05); /* Very subtle purple tint */
+    border: 1px solid rgba(219, 39, 119, 0.3);
+    transform: scale(1.05);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--super-gradient);
+    color: white;
+    padding: 0.4rem 1.2rem;
+    border-radius: 9999px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+.card-top {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.card-top h3 {
+    font-size: 1.25rem;
+    color: var(--text-h);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.price-tag {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.price {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--text-h);
+}
+
+.period {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.package-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.package-features li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.check-icon {
+    color: #db2777;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+    .pricing-card.featured {
+        transform: none;
+    }
+    
+    .pricing-grid {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-section {
+        padding: 3rem 0.5rem 6rem;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem; /* More gap since they are stacked and potentially scaled */
+    }
+
+    .pricing-card {
+        padding: 2rem 1.25rem;
+    }
+
+    .price {
+        font-size: 2.5rem;
+    }
+
+    .featured-badge {
+        font-size: 0.65rem;
+        padding: 0.35rem 1rem;
+    }
+}

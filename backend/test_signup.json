@@ -1,0 +1,10 @@
+{
+  "name": "Test User",
+  "age": 25,
+  "gender": "Male",
+  "city": "Test City",
+  "phone": "1234567890",
+  "role": "Member",
+  "email": "test_unique@example.com",
+  "password": "password123"
+}
